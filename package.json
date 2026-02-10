@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx prisma generate && next build --webpack",
+    "build": "next build --webpack",
+    "postinstall": "npx prisma generate",
     "start": "next start",
     "lint": "eslint",
     "migrate": "npx prisma generate && env $(cat .env.local | xargs) npx prisma migrate dev"
